@@ -19,10 +19,10 @@
         };
 
         ctrl.minitabs = [
-            {name: "Static Analysis"},
+            {name: "Static Analysis"} /** Commenting as we dont have these tabs data,
             {name: "Security"},
             {name: "OpenSource"},
-            {name: "Tests"}
+            {name: "Tests"} */
 
         ];
 
