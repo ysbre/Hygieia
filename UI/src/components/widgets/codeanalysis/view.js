@@ -80,7 +80,11 @@
             var deferred = $q.defer();
             var caData = _.isEmpty(response.result) ? {} : response.result[0];
 
+            /**
             ctrl.reportUrl = caData.url;
+            **/
+            ctrl.reportUrl = caData.url.replace('10.255.234.31:9000', 'sonar.yahoosmallbusiness.com:443/sonarqube');
+            ctrl.reportUrl = ctrl.reportUrl.replace('http', 'https');
             ctrl.versionNumber = caData.version;
 
             ctrl.rulesCompliance = getMetric(caData.metrics, 'violations_density');
